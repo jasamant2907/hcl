@@ -1,0 +1,19 @@
+---
+# tasks file for jenkinsinstall
+
+- name: Adding the necessary key
+  apt_key:
+    url: "{{ jenkins_key_url }}"
+    state: present
+
+- name : Adding necessary Repository
+  apt_repository:
+    repo: "{{ jenkins_repository_url }}"
+    state: present
+
+- name : Install jenkins
+  apt:
+   name: jenkins
+   state: present 
+  notify: "jenkins_service_start"
+

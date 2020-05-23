@@ -1,0 +1,4 @@
+---
+# vars file for javaInstall
+
+java_name: openjdk-8-jdk

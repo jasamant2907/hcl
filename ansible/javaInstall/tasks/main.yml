@@ -1,0 +1,8 @@
+---
+# tasks file for javaInstall
+#
+- name: installation of java
+  apt:
+   name: "{{ java_name }}"
+   state: present
+   update_cache: yes

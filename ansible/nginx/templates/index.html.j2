@@ -1,0 +1,58 @@
+    </style>
+  </head>
+  <body>
+        Hello from {{ name }}
+        </div>
+      </div>
+     <div class="table_of_contents floating_element">
+        <div class="section_header section_header_grey">
+          Hostname
+        </div>
+        <div class=" floating_element">
+          <a href="#about">{{ ansible_hostname }}</a>
+        </div>
+          <div class="section_header section_header_grey">
+         IP address
+        </div>
+        <div class=" floating_element">
+          <a href="#about">{{ ansible_default_ipv4 }}</a>
+        </div>
+          <div class="section_header section_header_grey">
+          Os Family
+        </div>
+        <div class=" floating_element">
+          <a href="#changes">{{ ansible_os_family }}</a>
+        </div>
+          <div class="section_header section_header_grey">
+          RAM
+        </div>
+        <div class=" floating_element">
+          <a href="#scope">{{ ansible_memory_mb }}</a>
+        </div>
+          <div class="section_header section_header_grey">
+          Disk Information
+        </div>
+        <div class=" floating_element">
+          <a href="#files">{{ ansible_mounts }}</a>
+        </div>
+          <div class="section_header section_header_grey">
+         Network Devices
+        </div>
+        <div class=" floating_element">
+          <a href="#files">{{ ansible_interfaces }}</a>
+        </div>
+      </div>
+      <div class="content_section floating_element">
+        <div class="section_header section_header_red">
+          <div id="about"></div>
+         ~ Hello from"{{ name }}" ~
+        </div>
+        <div class="content_section_text">
+         Welcome To official page of "{{ name }}"
+        </div>
+      </div>
+    </div>
+    <div class="validator">
+    </div>
+  </body>
+</html>

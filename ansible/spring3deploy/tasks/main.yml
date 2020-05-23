@@ -1,0 +1,25 @@
+---
+# tasks file for spring3deploy
+#
+- name: git checkout
+  git:
+    repo: "{{ repo_url }}"
+    dest: "{{ repo_dest }}"
+
+- name: mvn package
+  command: 
+   cmd: mvn package
+   chdir: "{{ repo_dest }}" 
+
+- name: deploy tomcat
+  copy:
+    src: "{{ repo_dest }}/target/Spring3HibernateApp.war"
+    dest: "{{ tomcat_dest }}"
+    remote_src: yes 
+
+- name: health check
+  uri:
+    url: "{{ deploy_url }}"
+    method: GET
+  register: result
+  failed_when: result.status != 200

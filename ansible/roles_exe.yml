@@ -1,0 +1,31 @@
+---
+#- hosts: tag_Name_eg_dev_ngnix
+# remote_user: ubuntu
+# become: true
+#  roles:
+#    - /home/ubuntu/HCL/devops-hcl/ansible/nginx
+
+#- hosts: tag_Name_eg_dev_mysql
+#  remote_user: ubuntu
+#  become: true
+#  roles:
+#    - /home/ubuntu/HCL/devops-hcl/ansible/mysql
+
+#- hosts: tag_Name_eg_dev_tomcat
+#  remote_user: ubuntu
+#  become: true
+#  roles:
+#    - /home/ubuntu/HCL/devops-hcl/ansible/tomcat
+
+- hosts: tag_Name_eg_dev_jenkins
+  remote_user: ubuntu
+  become: true
+  roles:
+    - /home/ubuntu/HCL/devops-hcl/ansible/jenkinsinstall
+
+- hosts: tag_Name_eg_dev_jenkins
+  remote_user: ubuntu
+  become: true
+  roles:
+    - /home/ubuntu/HCL/devops-hcl/ansible/maven
+      

@@ -1,0 +1,3 @@
+---
+nginx_package_name: nginx
+nginx_yum_repo_enabled: true

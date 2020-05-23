@@ -1,0 +1,9 @@
+---
+# handlers file for jenkinsinstall
+#
+- name: jenkins_service_start
+  service:
+   name: jenkins
+   state: started
+
+

@@ -1,0 +1,18 @@
+---
+- name: install python3 on all instances
+  hosts: all
+  become: true
+  gather_facts: false
+  tasks:
+    - name: run apt-get update and install python3
+      raw: "{{ item }}"
+      loop:
+        - sudo apt-get update
+        - sudo apt-get -y install python3
+    
+    - name: symlink /usr/bin/python -> /usr/bin/python3
+      raw: |
+        if [ -f /usr/bin/python3 ] && [ ! -f /usr/bin/python ]; then
+          ln --symbolic /usr/bin/python3 /usr/bin/python; 
+        fi   
+      ignore_errors: true

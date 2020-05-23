@@ -1,0 +1,22 @@
+---
+- name: update cache
+  apt:
+    update_cache: yes
+
+- name: install Nginx
+  apt: 
+    name: nginx
+    state: present
+
+- name: index page of nginx
+  template:
+    src: index.html.j2
+    dest: /var/www/html/index.html
+    
+- name: configuration file of nginx
+  template:
+    src: default.j2
+    dest: /etc/nginx/sites-enabled/default
+  notify:
+    - restart nginx
+

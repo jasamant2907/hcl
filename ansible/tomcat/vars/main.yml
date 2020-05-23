@@ -1,0 +1,7 @@
+---
+java_home: /usr/lib/jvm/java-8-openjdk-amd64/jre/
+tomcat_home: /opt/tomcat
+tomcat_group: tomcat
+tomcat_user: tomcat
+ver: 9
+version: 9.0.35

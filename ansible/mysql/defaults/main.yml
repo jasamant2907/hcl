@@ -1,0 +1,7 @@
+---
+# defaults file for /etc/ansible/roles/mysql
+#
+mysql_root_password: admin
+hosts: all
+user1_password: user1
+

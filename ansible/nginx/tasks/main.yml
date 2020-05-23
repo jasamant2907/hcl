@@ -1,0 +1,8 @@
+---
+  - name: install nginx for Debian
+    include_tasks: Debian.yml
+    when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
+
+  - name: install nginx for Debian
+    include_tasks: Redhat.yml
+    when: ansible_distribution == 'CentOS' or ansible_distribution == 'Red Hat'
